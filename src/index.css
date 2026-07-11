@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    background-image: url("/background.png");
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+
+    font-family: Inter, sans-serif;
+}
+
+@keyframes floatingLogo {
+  0% {
+    transform: translate3d(0, 0px, 0) rotate(0deg) scale(1);
+  }
+
+  15% {
+    transform: translate3d(20px, -40px, 0) rotate(2deg) scale(1.02);
+  }
+
+  30% {
+    transform: translate3d(-15px, -90px, 0) rotate(-2deg) scale(1.05);
+  }
+
+  50% {
+    transform: translate3d(25px, -140px, 0) rotate(2deg) scale(1.08);
+  }
+
+  70% {
+    transform: translate3d(-20px, -90px, 0) rotate(-2deg) scale(1.05);
+  }
+
+  85% {
+    transform: translate3d(15px, -40px, 0) rotate(1deg) scale(1.02);
+  }
+
+  100% {
+    transform: translate3d(0, 0px, 0) rotate(0deg) scale(1);
+  }
+}
+
+.floating-logo {
+  animation: floatingLogo 8s ease-in-out infinite;
+  will-change: transform;
+  filter: drop-shadow(0 0 35px rgba(59, 130, 246, 0.35));
+}
+
+.testimonial-track {
+
+  animation: testimonials 35s linear infinite;
+
+}
+
+.group:hover .testimonial-track {
+
+  animation-play-state: paused;
+
+}
+
+@keyframes testimonials {
+
+  0% {
+
+    transform: translateX(0);
+
+  }
+
+  100% {
+
+    transform: translateX(-50%);
+
+  }
+
+}
+
+/* ===============================
+   Global Hero Fix
+================================== */
+
+section.relative {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
