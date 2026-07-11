@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "./Servicecard";
 import { services } from "./serviceData";
 
 export default function CoreServices() {

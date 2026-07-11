@@ -8,12 +8,11 @@ import {
 } from "lucide-react";
 
 const quickLinks = [
-  "Home",
-  "About Us",
-  "Services",
-  "Portfolio",
-  "Industries",
-  "Contact Us",
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Training & Development", path: "/training" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const services = [
@@ -166,26 +165,18 @@ export default function Footer() {
 
             </h3>
 
-            <ul className="space-y-4">
-
-              {quickLinks.map((link) => (
-
-                <li key={link}>
-
-                  <a
-                    href="#"
-                    className="text-slate-400 transition hover:text-sky-400"
-                  >
-
-                    {link}
-
-                  </a>
-
-                </li>
-
-              ))}
-
-            </ul>
+       <ul className="space-y-4">
+  {quickLinks.map((link) => (
+    <li key={link.name}>
+      <Link
+        to={link.path}
+        className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+      >
+        {link.name}
+      </Link>
+    </li>
+  ))}
+</ul>
 
           </motion.div>
 
