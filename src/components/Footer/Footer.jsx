@@ -281,7 +281,7 @@ export default function Footer() {
         href="mailto:info@manyaglobalsolutions.com"
         className="text-slate-300 transition hover:text-sky-400"
       >
-        info.myloticgroup@gmail.com
+        contact.myloticgroup@gmail.com
       </a>
     </div>
 
@@ -299,7 +299,7 @@ export default function Footer() {
         href="tel:+919876543210"
         className="text-slate-300 transition hover:text-sky-400"
       >
-        +91 9896484992 , 9717101758
+        +91 9896484992
       </a>
     </div>
 
